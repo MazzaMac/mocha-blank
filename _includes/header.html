@@ -1,0 +1,19 @@
+<header class="pt-1 pb-1" id="site-header">
+  <!-- <section class="wrapper"> -->
+    <section> 
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+     
+      <a id="site-title" class="no-decoration" rel="author" href="{{ "/" | relative_url }}"><h1>Mocha The Week</h1></a>
+    </section>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Latest</li>
+        <li>Best</li>
+      </ul>    
+    </nav>
+<!-- </section> -->
+</header>
