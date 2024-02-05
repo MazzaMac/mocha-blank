@@ -1,24 +1,264 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {%- include head.html -%}
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- <link rel="stylesheet" href="/assets/css/reset.css" /> -->
 
-  <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Satisfy&family=Special+Elite&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Mocha The Week" /></head>
+<body class="bg-primary text-primary bg-texture"><header  id="site-header">
+  <!-- <section class="wrapper"> -->
+    <section id="banner" class="pt-3 pb-3 bg-secondary bg-texture"><!-- <a id="site-title" class="no-decoration" rel="author" href="/"><h1 class="text-brown">Mocha The Week</h1></a> -->
 
-    {%- include header.html -%}
+      <img src="http://localhost:4000/assets/images/mocha-banner-clean.png" srcset="http://localhost:4000/assets/images/mocha-banner-ghosts.png 800w, http://localhost:4000/assets/images/mocha-banner-clean.png 200w" sizes="100vw" alt="mocha the week banner logo, chibi marianne with text" id="header-banner" />
 
-    <main class="page-content wrapper" aria-label="Content">
-      <section class="mt-2 mb-2"> 
+      <!-- <img src="http://localhost:4000/assets/images/mocha-banner-desktop.png" /> -->
+      <!-- <img src="http://localhost:4000/assets/images/mocha-banner-clean.png" /> -->
+    </section>
+<!-- </section> -->
+<nav class="bg-blue">
+      <ul class="text-white">
+        <li>Home</li>
+        <li>About</li>
+        <li>Latest</li>
+        <li>Best</li>
+      </ul>    
+    </nav>
+</header>
+ 
+<main class="page-content wrapper flex" aria-label="Content">
+      <section class="mt-2 mb-2 mr-2" id="main-content"> 
 
-        {{ content }}
+        <ul id="posts-list">
+  <li class="list-post">
+  <div class="banner-tags flex">
+      
+        
+         <p class="tag text-grey">love </p><p class="ml-1 mr-1 text-grey"> | </p>
+        
+         <p class="tag text-grey">life </p>
+        
+      
+    </div>
+      <a href="/2023/10/30/test-blog-post2.html" class="no-decoration text-primary mb-1"><h3 class="text-primary">Second Post!</h3></a>
+      <div role="doc-subtitle" class="mb-1"><a href="https://www.google.com/maps/place/Starbucks+Coffee/@55.962768,-3.1818147,17z/data=!3m1!4b1!4m12!1m5!3m4!2s9C7VF33C%2B8R!8m2!3d55.4533125!4d-2.9279375!3m5!1s0x4887c7f55f26685b:0xede4fd54b7c61883!8m2!3d55.962765!4d-3.1792398!16s%2Fg%2F11cs22x24b?entry=ttu" class="no-decoration text-primary">Costa, A6</a></div>
+      <img class="post-image mb-1" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dark_roasted_espresso_blend_coffee_beans_1.jpg" />
+      
+      <p class="mb-1"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ni...</p>
 
-      </section>
-          {%- include author_column.html -%}
-    </main>
+      <p class="more mt-2 mb-2">read more</p><hr class="glyph" />
+      
+    </li>
+<li class="list-post">
+  <div class="banner-tags flex">
+      
+        
+         <p class="tag text-grey">coffee </p><p class="ml-1 mr-1 text-grey"> | </p>
+        
+         <p class="tag text-grey">feelz </p>
+        
+      
+    </div>
+      <a href="/2023/09/30/test-blog-post.html" class="no-decoration text-primary mb-1"><h3 class="text-primary">Welcome to Jekyll!</h3></a>
+      <div role="doc-subtitle" class="mb-1"><a href="https://www.google.com/maps/place/Starbucks+Coffee/@55.962768,-3.1818147,17z/data=!3m1!4b1!4m12!1m5!3m4!2s9C7VF33C%2B8R!8m2!3d55.4533125!4d-2.9279375!3m5!1s0x4887c7f55f26685b:0xede4fd54b7c61883!8m2!3d55.962765!4d-3.1792398!16s%2Fg%2F11cs22x24b?entry=ttu" class="no-decoration text-primary">Starbucks, Royal Mile</a></div>
+      <img class="post-image mb-1" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dark_roasted_espresso_blend_coffee_beans_1.jpg" />
+      
+      <p class="mb-1"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ni...</p>
 
+      <p class="more mt-2 mb-2">read more</p><hr class="glyph" />
+      
+    </li>
 
-    {%- include footer.html -%}
+</ul>
 
-  </body>
+      </section><aside id="author">
+	<h3 class="mb-1">Author</h3>
+	<a class="site-logo" rel="author" href="/"><img class="author-image" src="http://localhost:4000/assets/images/author.png" /></a>
+
+	<p class="mb-1">Hello, I'm Marianne.</p>
+	<p class="mb-1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+ 
+<img src="http://localhost:4000/assets/images/mocha-the-week-ghosts.png" style="width:100%;"/>
+
+</aside></main><footer class="bg-black text-white">
+  
+  <div id="outer" class="flex">
+    <div id="inner" class="mb-2">
+      
+      <section id="footer_fiction" class="mb-2">
+       
+        
+          <a href=/writing/fiction class="text-white no-decoration footer-section-title"><h5>fiction</h5></a>
+        
+
+        
+    </section>
+
+    
+      <section id="footer_poetry" class="mb-2">
+       
+        
+          <a href=/writing/poetry class="text-white no-decoration footer-section-title"><h5>poetry</h5></a>
+        
+
+        
+          <ul>
+          
+          <li><a href="https://mariannemacrae.co.uk/collection" class="no-decoration text-white" >collection</a></li>
+          
+          <li><a href="https://somethingelse" class="no-decoration text-white" >Lister Pamphlet</a></li>
+          
+          </ul>
+        
+    </section>
+
+    
+      <section id="footer_academic" class="mb-2">
+       
+        
+          <a href=/writing/academic class="text-white no-decoration footer-section-title"><h5>academic</h5></a>
+        
+
+        
+          <ul>
+          
+          <li><a href="phdlink" class="no-decoration text-white" >phd</a></li>
+          
+          <li><a href="marianneMooreLink" class="no-decoration text-white" >Marianne Moore</a></li>
+          
+          </ul>
+        
+    </section>
+
+    
+      <section id="footer_blogs" class="mb-2">
+       
+        
+          <a href=/blogs class="text-white no-decoration footer-section-title"><h5>blogs</h5></a>
+        
+
+        
+          <ul>
+          
+          <li><a href="https://mochatheweek.co.uk" class="no-decoration text-white" >Mocha The Week</a></li>
+          
+          <li><a href="https://news.com" class="no-decoration text-white" >News</a></li>
+          
+          <li><a href="https://something" class="no-decoration text-white" >Archive</a></li>
+          
+          </ul>
+        
+    </section>
+
+    
+      <section id="footer_about" class="mb-2">
+       
+        
+          <a href=/about class="text-white no-decoration footer-section-title"><h5>about</h5></a>
+        
+
+        
+    </section>
+
+    
+      <section id="footer_socials" class="mb-2">
+       
+        
+          <h5 class="text-white footer-section-title">socials</h5> 
+        
+
+        
+          <ul>
+          
+          <li><a href="https://instagram.com" class="no-decoration text-white" >insta @maz</a></li>
+          
+          <li><a href="https://twitter.com/maz" class="no-decoration text-white" >twitta @maz</a></li>
+          
+          <li><a href="https://pinterest.com/maz" class="no-decoration text-white" >pinterest @maz</a></li>
+          
+          </ul>
+        
+    </section>
+
+    
+    </div>
+
+  <!-- Mailchimp Newsletter Form -->
+    <div id="footer_subscribe" class="mb-2">
+      <div id="mc_embed_shell">
+    <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css"> -->
+    <style type="text/css">
+        #mc_embed_signup{ 
+           /* clear:left; 
+            font:14px Helvetica, Arial, sans-serif; 
+            width: 300px; */
+        }
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+<div id="mc_embed_signup">
+    <form action="https://games.us11.list-manage.com/subscribe/post?u=f1faddaafa756755d023657f1&amp;id=686a9e9f6c&amp;f_id=00e19ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll">
+            <!-- <h2>Subscribe To Newsletter</h2> -->
+            <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+            <div class="mc-field-group">
+                <label for="mce-EMAIL"><h5>Newsletter</h5>
+                    <!-- <span class="asterisk">*</span> -->
+                </label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="your@email.net">
+            </div>
+        <div hidden="">
+            <input type="hidden" name="tags" value="9329490">
+        </div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="b_f1faddaafa756755d023657f1_686a9e9f6c" tabindex="-1" value="">
+    </div>
+        <!-- <div class="optionalParent"> -->
+            <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button text-white bg-blue" value="Subscribe">
+                <!-- <p style="margin: 0px auto;"><a href="http://eepurl.com/ioe8AA" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: black; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p> -->
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+    </div>
+  </div>
+
+  <!-- Social Icons -->
+  <div id="social_icons" class="flex">
+    <ul>
+      
+      
+        <a href="https://instagram.com" class="no-decoration social-icons">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 600 600" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1.01619,0,0,1.01619,44,43.8384)"><path d="M251.921,0.159C183.503,0.159 174.924,0.449 148.054,1.675C121.24,2.899 102.927,7.157 86.902,13.385C70.336,19.823 56.287,28.437 42.282,42.442C28.277,56.447 19.663,70.496 13.225,87.062C6.997,103.086 2.739,121.399 1.515,148.213C0.289,175.083 0,183.662 0,252.08C0,320.497 0.289,329.076 1.515,355.946C2.739,382.76 6.997,401.073 13.225,417.097C19.663,433.663 28.277,447.712 42.282,461.718C56.287,475.723 70.336,484.337 86.902,490.775C102.927,497.002 121.24,501.261 148.054,502.484C174.924,503.71 183.503,504 251.921,504C320.338,504 328.917,503.71 355.787,502.484C382.601,501.261 400.914,497.002 416.938,490.775C433.504,484.337 447.553,475.723 461.559,461.718C475.564,447.712 484.178,433.663 490.616,417.097C496.843,401.073 501.102,382.76 502.325,355.946C503.551,329.076 503.841,320.497 503.841,252.08C503.841,183.662 503.551,175.083 502.325,148.213C501.102,121.399 496.843,103.086 490.616,87.062C484.178,70.496 475.564,56.447 461.559,42.442C447.553,28.437 433.504,19.823 416.938,13.385C400.914,7.157 382.601,2.899 355.787,1.675C328.917,0.449 320.338,0.159 251.921,0.159ZM251.921,45.551C319.186,45.551 327.154,45.807 353.718,47.019C378.28,48.14 391.619,52.244 400.496,55.693C412.255,60.263 420.647,65.723 429.462,74.538C438.278,83.353 443.737,91.746 448.307,103.504C451.757,112.381 455.861,125.72 456.981,150.282C458.193,176.846 458.45,184.814 458.45,252.08C458.45,319.345 458.193,327.313 456.981,353.877C455.861,378.439 451.757,391.778 448.307,400.655C443.737,412.414 438.278,420.806 429.462,429.621C420.647,438.437 412.255,443.896 400.496,448.466C391.619,451.916 378.28,456.02 353.718,457.14C327.158,458.352 319.191,458.609 251.921,458.609C184.65,458.609 176.684,458.352 150.123,457.14C125.561,456.02 112.222,451.916 103.345,448.466C91.586,443.896 83.194,438.437 74.378,429.621C65.563,420.806 60.103,412.414 55.534,400.655C52.084,391.778 47.98,378.439 46.859,353.877C45.647,327.313 45.391,319.345 45.391,252.08C45.391,184.814 45.647,176.846 46.859,150.282C47.98,125.72 52.084,112.381 55.534,103.504C60.103,91.746 65.563,83.353 74.378,74.538C83.194,65.723 91.586,60.263 103.345,55.693C112.222,52.244 125.561,48.14 150.123,47.019C176.687,45.807 184.655,45.551 251.921,45.551Z" style="fill-rule:nonzero;"/><path d="M251.921,336.053C205.543,336.053 167.947,298.457 167.947,252.08C167.947,205.702 205.543,168.106 251.921,168.106C298.298,168.106 335.894,205.702 335.894,252.08C335.894,298.457 298.298,336.053 251.921,336.053ZM251.921,122.715C180.474,122.715 122.556,180.633 122.556,252.08C122.556,323.526 180.474,381.444 251.921,381.444C323.367,381.444 381.285,323.526 381.285,252.08C381.285,180.633 323.367,122.715 251.921,122.715Z" style="fill:rgb(3,4,4);fill-rule:nonzero;"/><path d="M416.627,117.604C416.627,134.3 403.092,147.834 386.396,147.834C369.701,147.834 356.166,134.3 356.166,117.604C356.166,100.908 369.701,87.374 386.396,87.374C403.092,87.374 416.627,100.908 416.627,117.604Z" style="fill:rgb(3,4,4);fill-rule:nonzero;"/></g></svg>
+        </a>
+      
+        <a href="https://twitter.com/maz" class="no-decoration social-icons">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104" style="fill-rule:nonzero;"/></svg>
+        </a>
+      
+        <a href="https://pinterest.com/maz" class="no-decoration social-icons">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M255.998,0.001c-141.384,0 -255.998,114.617 -255.998,255.998c0,108.456 67.475,201.171 162.707,238.471c-2.24,-20.255 -4.261,-51.405 0.889,-73.518c4.65,-19.978 30.018,-127.248 30.018,-127.248c0,0 -7.659,-15.334 -7.659,-38.008c0,-35.596 20.632,-62.171 46.323,-62.171c21.839,0 32.391,16.399 32.391,36.061c0,21.966 -13.984,54.803 -21.203,85.235c-6.03,25.482 12.779,46.261 37.909,46.261c45.503,0 80.477,-47.976 80.477,-117.229c0,-61.293 -44.045,-104.149 -106.932,-104.149c-72.841,0 -115.597,54.634 -115.597,111.095c0,22.004 8.475,45.596 19.052,58.421c2.09,2.535 2.398,4.758 1.776,7.343c-1.945,8.087 -6.262,25.474 -7.111,29.032c-1.117,4.686 -3.711,5.681 -8.561,3.424c-31.974,-14.884 -51.963,-61.627 -51.963,-99.174c0,-80.755 58.672,-154.915 169.148,-154.915c88.806,0 157.821,63.279 157.821,147.85c0,88.229 -55.629,159.232 -132.842,159.232c-25.94,0 -50.328,-13.476 -58.674,-29.394c0,0 -12.838,48.878 -15.95,60.856c-5.782,22.237 -21.382,50.109 -31.818,67.11c23.955,7.417 49.409,11.416 75.797,11.416c141.389,0 256.003,-114.612 256.003,-256.001c0,-141.381 -114.614,-255.998 -256.003,-255.998Z" style="fill-rule:nonzero;"/></svg>
+        </a>
+      
+
+    </ul>
+
+  </div>
+
+</footer></body>
 
 </html>

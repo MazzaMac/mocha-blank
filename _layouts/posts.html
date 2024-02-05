@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="bg-primary text-primary bg-texture">
+
+    {%- include header.html -%}
+
+    <main class="page-content wrapper flex" aria-label="Content">
+      <section class="mt-2 mb-2 mr-2" id="main-content"> 
+
+        <ul id="posts-list">
+  {% for post in site.posts %}
+
+    {%- include summary-post.html post=post -%}
+    
+  {% endfor %}
+</ul>
+
+      </section>
+          {%- include author_column.html -%}
+    </main>
+
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

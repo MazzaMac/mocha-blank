@@ -1,36 +1,45 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+<footer class="bg-black text-white">
+  
+  <div id="outer" class="flex">
+    <div id="inner" class="mb-2">
+      {% for section in site.data.footer %}
+      <section id="footer_{{section.name}}" class="mb-2">
+       
+        {% if section.url %}
+          {% include footer-section-title.html url=section.url text=section.name classes="footer-section-title" %}
+        {% else %}
+          <h5 class="text-white footer-section-title">{{section.name}}</h5> 
+        {% endif %}
 
-  <div class="wrapper">
+        {% if section.links %}
+          <ul>
+          {% for link in section.links %}
+          <li>{% include link.html url=link.url text=link.title classes="text-white" %}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+    </section>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
+    {% endfor %}
     </div>
 
-    <div class="social-links">
-      {%- include social.html -%}
+  <!-- Mailchimp Newsletter Form -->
+    <div id="footer_subscribe" class="mb-2">
+      {% include newsletter_subscribe.html %}
     </div>
+  </div>
+
+  <!-- Social Icons -->
+  <div id="social_icons" class="flex">
+    <ul>
+      {% assign social_links = site.data.footer | where: "name", "socials" %}
+      {% for link in social_links[0].links %}
+        <a href="{{link.url}}" class="no-decoration social-icons">
+          {% include {{ link.site | prepend: 'socials/' | append: '.svg' }} %}
+        </a>
+      {% endfor %}
+
+    </ul>
 
   </div>
 

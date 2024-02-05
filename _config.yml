@@ -8,3 +8,4 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mazzamac.github.io/mocha/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MarianneMacRae
 github_username:  MazzaMac
+theme: null

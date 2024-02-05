@@ -1,19 +1,25 @@
-<header class="pt-1 pb-1" id="site-header">
+<header  id="site-header">
   <!-- <section class="wrapper"> -->
-    <section> 
+    <section id="banner" class="pt-3 pb-3 bg-secondary bg-texture"> 
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
      
-      <a id="site-title" class="no-decoration" rel="author" href="{{ "/" | relative_url }}"><h1>Mocha The Week</h1></a>
+      <!-- <a id="site-title" class="no-decoration" rel="author" href="{{ "/" | relative_url }}"><h1 class="text-brown">Mocha The Week</h1></a> -->
+
+      <img src="{{"/assets/images/mocha-banner-clean.png" | absolute_url }}" srcset="{{"/assets/images/mocha-banner-ghosts.png" | absolute_url }} 800w, {{"/assets/images/mocha-banner-clean.png" | absolute_url }} 200w" sizes="100vw" alt="mocha the week banner logo, chibi marianne with text" id="header-banner" />
+
+      <!-- <img src="{{"/assets/images/mocha-banner-desktop.png" | absolute_url }}" /> -->
+      <!-- <img src="{{"/assets/images/mocha-banner-clean.png" | absolute_url }}" /> -->
     </section>
-    <nav>
-      <ul>
+<!-- </section> -->
+<nav class="bg-blue">
+      <ul class="text-white">
         <li>Home</li>
         <li>About</li>
         <li>Latest</li>
         <li>Best</li>
       </ul>    
     </nav>
-<!-- </section> -->
 </header>
+ 
