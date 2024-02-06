@@ -1,3 +1,7 @@
+---
+---
+
+/*@import "{{ site.theme }}";*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -271,7 +275,7 @@ width: 100%; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 
-a#site-title < h1 , a:visited#site-title < h1, a:active#site-title < h1, a:hover#site-title < h1{ 
+a#site-title h1 , a:visited#site-title h1, a:active#site-title h1, a:hover#site-title h1{ 
 	font-family: "Satisfy", sans-serif; 
 	color: black;
 }
@@ -417,7 +421,7 @@ hr.glyph {
     -webkit-appearance: checkbox;
 }
 
-#mc_embed_signup input[type=radio] {z
+#mc_embed_signup input[type=radio] {
     -webkit-appearance: radio;
 }
 
